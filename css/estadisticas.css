@@ -1,0 +1,130 @@
+/* --- Sección de Estadísticas --- */
+.mil-statistics-section {
+    padding: 80px 0px 80px 0px;
+    text-align: center;
+}
+
+/* --- Contenedor de Estadísticas --- */
+.stats-container {
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+}
+
+/* --- Ajuste del texto en cada estadística --- */
+.stat {
+    text-align: center;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 🔥 Asegura que todo esté centrado */
+    justify-content: center;
+}
+
+/* --- Alineación del texto debajo del círculo --- */
+.stat p {
+    font-family: 'IBMPlex-Bold';
+    text-align: center;
+    margin-top: 10px; /* 🔥 Ajusta la separación con el círculo */
+    width: 100%; /* 🔥 Asegura que ocupe todo el ancho del `.stat` */
+}
+
+
+/* --- Círculo con conic-gradient() --- */
+.circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: conic-gradient(#ddd 0deg, #ddd 360deg); /* Inicialmente gris */
+}
+
+/* --- Fondo blanco para dar efecto de borde --- */
+.circle::before {
+    content: "";
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    background: #ECECEA;
+    border-radius: 50%;
+}
+
+/* --- Texto del porcentaje (Corrección para centrarlo) --- */
+.percentage {
+    font-family: 'Georama-Bold';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Centrado exacto */
+    font-size: 20px;
+    font-weight: bold;
+    color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* --- Títulos y textos --- */
+.mil-stylized {
+    font-size: 18px;
+    color: #666;
+    text-transform: uppercase;
+    line-height: 100%;
+margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.mil-head1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #222;
+    padding: 0 80px;
+}
+
+.mil-a1 {
+    color: #7f7cfd;
+}
+.highlight-bg {
+    background-color: #7f7cfd; /* Fondo blanco solo para este texto */
+    padding: 5px 8px; /* Ajusta el espaciado interno */
+    display: inline-block; /* Evita que el fondo cubra más de lo necesario */
+    border-radius: 5px; /* Opcional: Bordes redondeados para mejor estética */
+}
+
+
+/* 🔥🔥🔥 RESPONSIVE DESIGN 🔥🔥🔥 */
+@media screen and (max-width: 768px) {
+    .stats-container {
+        flex-direction: column; /* 📌 Apilamos en pantallas pequeñas */
+        align-items: center;
+        gap: 40px; /* Reducimos el espacio entre elementos */
+    }
+
+    .circle {
+        width: 100px; /* 📌 Círculos más pequeños */
+        height: 100px;
+    }
+
+    .circle::before {
+        width: 90px; /* 📌 Ajustamos el fondo del círculo */
+        height: 90px;
+    }
+
+    .percentage {
+        font-size: 18px; /* 📌 Reducimos tamaño del número */
+    }
+
+    .mil-head1 {
+        font-size: 28px; /* 📌 Hacemos el título más compacto */
+    }
+
+    .stat {
+        width: 100%; /* 📌 Hacemos que cada estadística ocupe todo el ancho */
+    }
+}

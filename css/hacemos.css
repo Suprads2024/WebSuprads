@@ -1,0 +1,227 @@
+/* --- FONDO PRINCIPAL CON IMAGEN DE FONDO --- */
+.mil-hero-img.mil-up {
+    background-image: url("../img/suprads/1980x1920Fondo_portada.jpg"); /* Cambia por la ruta correcta */
+    background-size: cover; /* La imagen cubre todo el div */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    padding: 60px 20px;
+
+}
+
+/* --- TÍTULO PRINCIPAL --- */
+.soluciones-titulo {
+    font-family: 'Georama-ExtraBold';
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 80px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- CONTENEDORES GENERALES --- */
+.soluciones-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px; /* Más espacio entre filas */
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.fila {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Más espacio entre tarjetas */
+}
+
+/* --- ESTILO DE TARJETAS MÁS GRANDES --- */
+.solucion {
+    position: relative;
+    background: #ffffff;
+    border-radius: 25px;
+    padding: 60px 20px 30px; /* Más padding */
+    width: 300px; /* Más ancho */
+    height: 250px; /* Más alto */
+    box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+}
+
+.solucion:hover {
+    transform: translateY(-7px);
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* --- LOGOS MÁS GRANDES --- */
+.solucion-logo {
+    position: absolute;
+    top: -60px!important; /* Flotando arriba */
+    left: 50%!important; /* Centrado */
+    margin-left: -60px; /* Mitad del ancho para centrar */
+    width: 120px!important;
+    height: 120px!important;
+    object-fit: contain!important;
+    z-index: 2;
+    transition: transform 0.5s ease!important;
+}
+
+/* --- Activamos la animación solo al hacer hover sobre .solucion --- */
+.solucion:hover .solucion-logo {
+    animation: floatLogo 3s ease-in-out infinite!important;
+}
+
+/* --- Definimos la animación de flotación --- */
+@keyframes floatLogo {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* --- Alinear Títulos y Descripciones --- */
+.solucion h3 {
+    font-size: 1.2rem;
+    min-height: 50px; /* Altura fija para todos los títulos */
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.solucion p {
+    font-family: 'IBMPlex-Medium';
+    min-height: 60px; /* Altura fija para todas las descripciones */
+    line-height: 1.4;
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.solucion h3 span {
+    color: #777;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+
+/* --- BOTÓN COMO EN TU EJEMPLO --- */
+.solucion-btn {
+    font-family: 'IBMPlex-Medium';
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: #7f7cfd;
+    border-radius: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.solucion-btn:hover {
+    background-color: #9392f8;
+}
+
+/* --- RESPONSIVE PARA PANTALLAS PEQUEÑAS --- */
+@media (max-width: 1024px) {
+    .fila {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .solucion {
+        width: 250px;
+        height: 260px;
+    }
+}
+
+@media (max-width: 768px) {
+    .fila {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .solucion {
+        width: 90%;
+        height: auto;
+    }
+
+    .solucion-logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .solucion-btn {
+        font-size: 13px;
+        padding: 10px 20px;
+    }
+}
+
+
+/* ==========================
+   RESPONSIVE DESIGN
+========================== */
+
+/* Tablets: 2 columnas */
+@media (max-width: 1024px) {
+    .fila {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .solucion {
+        width: 250px;
+        height: 260px;
+    }
+}
+
+/* Móviles: 1 columna con espaciado uniforme */
+@media (max-width: 768px) {
+    .soluciones-container {
+        display: flex;
+        flex-direction: column;
+        gap: 25px; /* Gap uniforme para todas las tarjetas */
+        align-items: center;
+    }
+
+    .fila {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .solucion {
+        width: 90%;
+        height: auto;
+        padding: 50px 20px 30px;
+    }
+
+    .solucion-logo {
+        width: 70px;
+        height: 70px;
+        top: -30px;
+    }
+
+    .solucion h3 {
+        font-size: 18px;
+    }
+
+    .solucion p {
+        font-size: 14px;
+    }
+
+    .solucion-btn {
+        font-size: 13px;
+        padding: 10px 20px;
+    }
+}

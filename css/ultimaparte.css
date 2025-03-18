@@ -1,0 +1,94 @@
+/* Estilos Generales */
+.cta-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    text-align: center;
+    padding: 50px 20px;
+
+}
+
+/* Cada Elemento */
+.cta-item {
+    max-width: 280px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+/* Icono Circular */
+.cta-icon {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    border: 2px solid #7f7cfd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-icon img {
+    width: 100px;
+    height: 100px;
+}
+
+/* Títulos - Se asegura que ocupen el mismo espacio */
+.cta-title {
+    font-size: 16px;
+    font-weight: bold;
+  
+    margin-bottom: 10px;
+    min-height: 45px; /* 👈 Esto obliga a que todos los títulos tengan la misma altura */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-item p{
+    font-family: 'IBMPlex-Regular'!important;
+}
+/* Texto Descriptivo - Mantener misma altura */
+.cta-text {
+    min-height: 60px; /* 👈 Ajusta la altura para igualar espacios */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* 📌 Contenedor del Botón - Siempre en la misma posición */
+.cta-button-container {
+    margin-top: auto; /* 👈 Empuja los botones hacia abajo */
+}
+
+/* Botón */
+.cta-button {
+    font-family: 'IBMPlex-Medium';
+    background-color: #7f7cfd !important;
+    color: white !important;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+/* Hover */
+.cta-button:hover {
+    background-color: #070707 !important;
+    cursor: pointer;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .cta-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
