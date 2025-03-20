@@ -65,12 +65,17 @@
             <div class="mil-top-panel-2">
                 <div class="container">
                     <div class="mil-left-side mil-tp-transition" id="swupTpLeft">
-                        <a href="../" class="mil-logo mil-scroll-to" >
+                        <a href="../index.html" class="mil-logo mil-scroll-to">
                             <img src="../img/suprads/Logo-2.png" alt="Logo de la empresa">
                         </a>
+                        
 
                     </div>
-
+<script>document.querySelector('.mil-logo').addEventListener('click', function(event) {
+    event.preventDefault();
+    window.location.href = this.getAttribute('href');
+});
+</script>
                     <div class="mil-onepage-nav" id="swup-opm">
                         <ul>
                             <li><a href="#services" class="mil-scroll-to" data-no-swup>Inicio</a></li>
@@ -737,6 +742,8 @@
     <script src="../js/plugins/parallax.js"></script>
     <!-- estadisticas js -->
     <script src="../js/estadisticas.js"></script>
+
+    <script src="../js/navegar.js"></script>
 
     <!-- pixy js -->
     <script src="../js/main.js"></script>
