@@ -23,16 +23,32 @@
 </head>
 
 <body class="proyecto">
-
+ <!-- preloader -->
+ <div class="mil-preloader">
+    <div class="mil-preloader-animation">
+        <div class="mil-pos-abs mil-animation-1">
+            <p class="mil-head1 mil-m1">Pioneering</p>
+            <p class="mil-head1 mil-a2">Creative</p>
+            <p class="mil-head1 mil-m1">Excellence</p>
+        </div>
+        <div class="mil-pos-abs mil-animation-2">
+            <div class="mil-reveal-frame">
+                <p class="mil-reveal-box"></p>
+                <p class="mil-head1 mil-m1">pixy.com</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- preloader end -->
     <!-- wrapper -->
     <div id="smooth-wrapper" class="mil-page-wrapper2">
 
-         <!-- fixed elements -->
-         <div class="mil-fixed">
+        <!-- fixed elements -->
+        <div class="mil-fixed">
             <div class="mil-top-panel-2">
                 <div class="container">
                     <div class="mil-left-side mil-tp-transition" id="swupTpLeft">
-                        <a href="../index.html" class="mil-logo mil-scroll-to" >
+                        <a href="../index.html" class="mil-logo mil-scroll-to">
                             <img src="../img/suprads/Logo-1.png" alt="Logo de la empresa">
                         </a>
 
@@ -68,9 +84,9 @@
                             <div class="col-lg-12">
                                 <div class="mil-menu-part mil-inner-scroll" id="swupMenu">
                                     <ul class="mil-main-menu">
-                                        <li><a href="#top" class="mil-scroll-to">Inicio</a></li>
+                                        <li><a href="../index.html" class="mil-scroll-to">Inicio</a></li>
                                         <li><a href="proyectos/" class="mil-scroll-to" data-no-swup>Proyectos</a></li>
-                                        <li><a href="planificador/" class="mil-scroll-to" data-no-swup>Planificador</a>
+                                        <li><a href="#top" class="mil-scroll-to" data-no-swup>Planificador</a>
                                         </li>
                                         <li><a href="nosotros/" class="mil-scroll-to" data-no-swup>Nosotros</a></li>
                                     </ul>
@@ -95,7 +111,7 @@
         <div class="mil-hero-1 mil-sm-hero mil-up" id="top">
             <div class="container mil-hero-main mil-relative mil-aic">
                 <div class="mil-hero-text mil-scale-img" data-value-1="1.3" data-value-2="0.95">
-                   
+
                     <h1 class="mil-display3 mil-rubber">Planificador de proyectos
                     </h1>
                 </div>
@@ -140,7 +156,7 @@
                         <form action="../form1.php" method="post" class="mil-form" accept-charset="UTF-8">
                             <!-- 📌 TÍTULO -->
                             <h3 class="mil-form-title">Tu Información</h3>
-                        
+
                             <!-- 📌 FILA: Nombre y Empresa -->
                             <div class="mil-form-row">
                                 <div class="mil-input-group">
@@ -152,7 +168,7 @@
                                     <input type="text" id="company" name="company" required>
                                 </div>
                             </div>
-                        
+
                             <!-- 📌 FILA: Email y Teléfono -->
                             <div class="mil-form-row">
                                 <div class="mil-input-group">
@@ -164,10 +180,10 @@
                                     <input type="tel" id="phone" name="phone" required>
                                 </div>
                             </div>
-                        
+
                             <!-- 📌 TÍTULO -->
                             <h3 class="mil-form-title">Tipo de Proyecto</h3>
-                        
+
                             <!-- 📌 BOTONES SELECCIONABLES -->
                             <div class="mil-budget-options">
                                 <label class="mil-budget-btn">
@@ -187,19 +203,19 @@
                                     <span>CRM y Automatizaciones</span>
                                 </label>
                             </div>
-                        
+
                             <!-- 📌 TÍTULO -->
                             <h3 class="mil-form-title">Contanos sobre tu Proyecto y Objetivos</h3>
-                        
+
                             <!-- 📌 ÁREA DE TEXTO -->
                             <div class="mil-textarea-group">
                                 <label for="project">Cuadro de texto:</label>
                                 <textarea id="project" name="project" rows="4" required></textarea>
                             </div>
-                        
+
                             <!-- 📌 TÍTULO -->
                             <h3 class="mil-form-title">Presupuesto Estimado</h3>
-                        
+
                             <!-- 📌 OPCIONES DE PRESUPUESTO -->
                             <div class="mil-budget-options">
                                 <label class="mil-budget-btn">
@@ -215,13 +231,14 @@
                                     <span>Más de USD 1000</span>
                                 </label>
                             </div>
-                        
+
                             <!-- 📌 BOTÓN DE ENVÍO -->
                             <div class="mil-submit-container">
-                                <button type="submit" class="mil-submit-btn" name="submit_form1">Sí, envía esto.</button>
+                                <button type="submit" class="mil-submit-btn" name="submit_form1">Sí, envía
+                                    esto.</button>
                             </div>
                         </form>
-                        
+
                     </div>
                 </div>
             </div>
@@ -586,7 +603,7 @@
                     <li><a href="../planificador/">Planificador</a></li>
                 </ul>
 
-                  <!-- 📌 REDES SOCIALES 
+                <!-- 📌 REDES SOCIALES 
                                 <div class="custom-footer-social">
                                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                                     <a href="#"><i class="fab fa-instagram"></i></a>
@@ -603,28 +620,43 @@
     </footer>
 
 
-
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             // Ocultar todos los formularios al cargar la página
-            document.querySelectorAll('.mil-form-section').forEach(function (form) {
+            document.querySelectorAll('.mil-form-section').forEach(form => {
                 form.style.display = 'none';
+                form.style.opacity = 0;
             });
-    
-            // Verificar si la URL contiene un hash
-            const hash = window.location.hash;
+
+            // Verificar si hay un fragmento en la URL
+            const hash = window.location.hash.substring(1); // Eliminar el '#' del fragmento
             if (hash) {
-                const targetForm = document.querySelector(hash);
-                if (targetForm) {
-                    targetForm.style.display = 'block';
-                    targetForm.style.opacity = 1;
-                    targetForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+                showForm(hash);
             }
         });
+
+        function showForm(formId, event) {
+            if (event) event.preventDefault(); // Evitar acciones inesperadas del botón
+
+            // Ocultar todos los formularios
+            document.querySelectorAll('.mil-form-section').forEach(form => {
+                form.style.display = 'none';
+                form.style.opacity = 0;
+            });
+
+            // Mostrar el formulario seleccionado con animación
+            const selectedForm = document.getElementById(formId);
+            if (selectedForm) {
+                selectedForm.style.display = 'block';
+                setTimeout(() => {
+                    selectedForm.style.opacity = 1;
+                    selectedForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            }
+        }
     </script>
-    
-    
+
+
 
     <!-- swup js -->
     <script src="../js/plugins/swup.min.js"></script>

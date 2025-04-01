@@ -33,7 +33,7 @@
         <div class="mil-cursor-follower"></div>
         <!-- cursor end -->
 
-        <!-- preloader 
+        <!-- preloader -->
         <div class="mil-preloader">
             <div class="mil-preloader-animation">
                 <div class="mil-pos-abs mil-animation-1">
@@ -48,7 +48,7 @@
                     </div>
                 </div>
             </div>
-        </div>-->
+        </div>
         <!-- preloader end -->
 
         <!-- scroll progress -->
@@ -57,11 +57,12 @@
         </div>
         <!-- scroll progress end -->
          <!-- fixed elements -->
-         <div class="mil-fixed">
+        <!-- fixed elements -->
+        <div class="mil-fixed">
             <div class="mil-top-panel-2">
                 <div class="container">
                     <div class="mil-left-side mil-tp-transition" id="swupTpLeft">
-                        <a href="../index.html" class="mil-logo mil-scroll-to" data-no-swup>
+                        <a href="../index.html" class="mil-logo mil-scroll-to">
                             <img src="../img/suprads/Logo-1.png" alt="Logo de la empresa">
                         </a>
 
@@ -69,19 +70,14 @@
 
                     <div class="mil-onepage-nav" id="swup-opm">
                         <ul>
-                            <li><a href="#services" class="mil-scroll-to">Inicio</a></li>
-                            <li><a href="#top" class="mil-scroll-to" data-no-swup>Proyectos</a></li>
-                           
-                            <li><a href="../planificador/" class="mil-scroll-to" data-no-swup>Planificador</a></li>
-                            <li><a href="../nosotros/" class="mil-scroll-to" data-no-swup>Nosotros</a></li>
+                            <li><a href="../index.html" class="mil-scroll-to">Inicio</a></li>
+                            <li><a href="proyectos/" class="mil-scroll-to" data-no-swup>Proyectos</a></li>
+
+                            <li><a href="planificador/" class="mil-scroll-to" data-no-swup>Planificador</a></li>
+                            <li><a href="nosotros/" class="mil-scroll-to" data-no-swup>Nosotros</a></li>
 
                         </ul>
                     </div>
-                    <script>document.querySelector('.mil-logo').addEventListener('click', function (event) {
-                        event.preventDefault();
-                        window.location.href = this.getAttribute('href');
-                    });
-                </script>
 
                     <div class="mil-buttons-tp-frame mil-c-gone">
                         <div class="mil-buttons">
@@ -94,161 +90,30 @@
                 </div>
             </div>
 
+
             <div class="mil-menu-frame mil-menu-frame-2">
                 <div class="mil-menu-window">
                     <div class="container">
                         <div class="row mil-no-g">
-                            <div class="col-lg-6">
-                                <div class="mil-left-side">
-                                    <div class="mil-menu-part mil-inner-scroll" id="swupMenu">
-                                        <ul class="mil-main-menu mil-c-gone">
-                                            <li class="mil-has-children">
-                                                <a href="#.">Template style</a>
-                                                <ul>
-                                                    <li><a href="home-1.html" target="_blank" data-no-swup>Friendly</a>
-                                                    </li>
-                                                    <li class="mil-current"><a href="home-4.html" target="_blank"
-                                                            data-no-swup>Stylish</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="mil-has-children">
-                                                <a href="#.">Home type</a>
-                                                <ul>
-                                                    <li class="mil-current"><a href="home-4.html">Corporate</a></li>
-                                                    <li><a href="home-5.html">Agency</a></li>
-                                                    <li><a href="home-6.html">Personal</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="mil-has-children">
-                                                <a href="#.">Portfolio</a>
-                                                <ul>
-                                                    <li><a href="portfolio-1-stl.html">Grid type 1</a></li>
-                                                    <li><a href="portfolio-2-stl.html">Grid type 2</a></li>
-                                                    <li><a href="portfolio-3-stl.html">Grid type 3</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="mil-has-children">
-                                                <a href="#.">Pages</a>
-                                                <ul>
-                                                    <li><a href="team-stl.html">Team</a></li>
-                                                    <li><a href="contact-stl.html">Contact</a></li>
-                                                    <li><a href="services-stl.html">Services</a></li>
-                                                    <li><a href="service-stl.html">Service single</a></li>
-                                                    <li><a href="blog-stl.html">Blog</a></li>
-                                                    <li><a href="publication-stl.html">Publication</a></li>
-                                                    <li><a href="404-stl.html">404</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="mil-bottom-part">
-                                        <p class="mil-text-sm">©2024. All rights reserved.</p>
-                                    </div>
+                            <div class="col-lg-12">
+                                <div class="mil-menu-part mil-inner-scroll" id="swupMenu">
+                                    <ul class="mil-main-menu">
+                                        <li><a href="../index.html" class="mil-scroll-to">Inicio</a></li>
+                                        <li><a href="proyectos/" class="mil-scroll-to" data-no-swup>Proyectos</a></li>
+                                        <li><a href="#top" class="mil-scroll-to" data-no-swup>Planificador</a>
+                                        </li>
+                                        <li><a href="nosotros/" class="mil-scroll-to" data-no-swup>Nosotros</a></li>
+                                    </ul>
                                 </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="mil-right-side">
-                                    <div class="mil-links-part">
-                                        <ul class="mil-links">
-                                            <li><a href="#.">Privacy policy</a></li>
-                                            <li><a href="#.">Therms and conditions</a></li>
-                                            <li><a href="#.">Site map</a></li>
-                                            <li><a href="#.">Careers</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="mil-blog-part">
-                                        <div class="mil-blog-section">
-                                            <div class="mil-jcb mil-aic">
-                                                <h4 class="mil-head4 mil-mb30">Latest from blog</h4>
-                                                <div class="mil-sb-nav mil-mb30">
-                                                    <div class="mil-slider-btn mil-sb-prev mil-c-gone"><i
-                                                            class="fal fa-arrow-left"></i></div>
-                                                    <div class="mil-slider-btn mil-sb-next mil-c-gone"><i
-                                                            class="fal fa-arrow-right"></i></div>
-                                                </div>
-                                            </div>
-                                            <div class="swiper-container mil-blog-slider-sm">
-                                                <div class="swiper-wrapper">
-                                                    <div class="swiper-slide">
-                                                        <a href="publication-stl.html"
-                                                            class="mil-blog-card-sm mil-c-gone">
-                                                            <div class="mil-cover">
-                                                                <div class="mil-hover-frame">
-                                                                    <img src="img/blog/9.jpg" alt="cover">
-                                                                </div>
-                                                            </div>
-                                                            <div class="mil-text-frame">
-                                                                <h4 class="mil-head6 mil-max-1row-text">How to Become a
-                                                                    Graphic Designer in 10 Simple Steps</h4>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <a href="publication-stl.html"
-                                                            class="mil-blog-card-sm mil-c-gone">
-                                                            <div class="mil-cover">
-                                                                <div class="mil-hover-frame">
-                                                                    <img src="img/blog/10.jpg" alt="cover">
-                                                                </div>
-                                                            </div>
-                                                            <div class="mil-text-frame">
-                                                                <h4 class="mil-head6 mil-max-1row-text">10 Essential
-                                                                    Tools Every Graphic Designer Should Master</h4>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <a href="publication-stl.html"
-                                                            class="mil-blog-card-sm mil-c-gone">
-                                                            <div class="mil-cover">
-                                                                <div class="mil-hover-frame">
-                                                                    <img src="img/blog/11.jpg" alt="cover">
-                                                                </div>
-                                                            </div>
-                                                            <div class="mil-text-frame">
-                                                                <h4 class="mil-head6 mil-max-1row-text">The Ultimate
-                                                                    Guide to UI/UX Design for Beginners</h4>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <a href="publication-stl.html"
-                                                            class="mil-blog-card-sm mil-c-gone">
-                                                            <div class="mil-cover">
-                                                                <div class="mil-hover-frame">
-                                                                    <img src="img/blog/12.jpg" alt="cover">
-                                                                </div>
-                                                            </div>
-                                                            <div class="mil-text-frame">
-                                                                <h4 class="mil-head6 mil-max-1row-text">How to Create
-                                                                    Stunning Visuals with Minimal Effort</h4>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="mil-menu-social">
-                                            <ul class="mil-social mil-c-gone">
-                                                <li><a href="#." target="_blank" data-no-swup><i
-                                                            class="far fa-circle"></i></a></li>
-                                                <li><a href="#." target="_blank" data-no-swup><i
-                                                            class="far fa-circle"></i></a></li>
-                                                <li><a href="#." target="_blank" data-no-swup><i
-                                                            class="far fa-circle"></i></a></li>
-                                                <li><a href="#." target="_blank" data-no-swup><i
-                                                            class="far fa-circle"></i></a></li>
-                                                <li><a href="#." target="_blank" data-no-swup><i
-                                                            class="far fa-circle"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                <div class="mil-bottom-part">
+                                    <p class="mil-text-sm">©2024. Todos los derechos reservados.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
         <!-- fixed elements end -->
 
