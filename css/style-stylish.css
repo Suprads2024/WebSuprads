@@ -539,7 +539,7 @@ a {
   color: #7f7cfd;
 }
 .mil-arrow-link.mil-a2:after {
-  olor: #7f7cfd;
+  color: #7f7cfd;
 }
 .mil-arrow-link:hover:after {
   -webkit-transform: translateX(5px);
@@ -2884,7 +2884,7 @@ top panel
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0 60px;
+          margin-right: -400px;
   width: 100%;
   -webkit-transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
   transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
@@ -3966,10 +3966,17 @@ team
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top;
+  object-position: center; /* Asegura que siempre se centre */
   border-radius: 15px;
+  transform: scale(0.85); /* Reduce el tamaño al 85% */
+  transition: transform 0.3s ease-in-out; /* Animación suave */
 }
 
+
+/* Si quieres que crezca al pasar el mouse */
+.mil-team-card:hover img {
+  transform: scale(1); /* Vuelve a tamaño normal */
+}
 .mil-team-card .mil-hover-overlay {
   opacity: 0;
   position: absolute;

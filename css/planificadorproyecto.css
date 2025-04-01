@@ -208,8 +208,8 @@
     padding: 50px 20px;
     
     border-radius: 10px;
- 
-    margin-bottom: 50px;
+ margin-top: -50px;
+    margin-bottom: 100px;
 }
 
 /* 📌 Título Principal */

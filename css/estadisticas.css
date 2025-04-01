@@ -80,7 +80,7 @@ margin-bottom: 20px;
     letter-spacing: 1px;
 }
 
-.mil-head1 {
+.mil-head2 {
     font-size: 32px;
     font-weight: bold;
     color: #222;
@@ -120,10 +120,9 @@ margin-bottom: 20px;
         font-size: 18px; /* 📌 Reducimos tamaño del número */
     }
 
-    .mil-head1 {
-        font-size: 28px; /* 📌 Hacemos el título más compacto */
-    }
-
+   
+   
+    
     .stat {
         width: 100%; /* 📌 Hacemos que cada estadística ocupe todo el ancho */
     }

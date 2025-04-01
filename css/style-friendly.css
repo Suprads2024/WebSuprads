@@ -186,8 +186,8 @@ body.proyecto {
 
 .mil-up {
   opacity: 0;
-  -webkit-transform: translateY(40px) scale(1.04);
-  transform: translateY(40px) scale(1.04);
+  -webkit-transform: translateY(20px) scale(1.04);
+  transform: translateY(20px) scale(1.04);
 }
 
 /* -------------------------------------------
@@ -651,12 +651,7 @@ a {
   }
 }
 
-@media (max-width: 768px) {
-  .mil-display1 {
-    font-size: calc(0.6rem + 8.5vw);
-    /* Más pequeño */
-  }
-}
+
 
 
 
@@ -748,7 +743,8 @@ a {
 }
 
 .mil-head1 {
-  font-size: 56px;
+ 
+  font-size: 32px;
   line-height: 120%;
 }
 
@@ -760,7 +756,7 @@ a {
 
 .mil-head2 {
   font-size: 42px;
-  line-height: 120%;
+  line-height: 110%;
 }
 
 .mil-head3 {
@@ -844,7 +840,7 @@ a {
 }
 
 .mil-a2-bg {
-  background-color: #37CC8D;
+  background-color: #D8D8D8;
 }
 
 .mil-deco-text {
@@ -1504,6 +1500,12 @@ spaces
 }
 
 @media screen and (max-width: 768px) {
+  .mil-logo img {
+    max-height: 40px;
+    /* Ajusta según el tamaño de tu logo */
+    width: auto;
+    display: block;
+  }
   .mil-mb130 {
     margin-bottom: 90px;
   }
@@ -1610,6 +1612,7 @@ hero 1
   align-items: center;
   text-align: center;
   padding-bottom: 30px;
+  margin-left: 50px;
 }
 
 /* .mil-hero-1 .mil-hero-main .mil-hero-text .mil-text-pad {
@@ -1759,8 +1762,8 @@ hero 1
 }
 
 .mil-hero-1 .mil-hero-img-frame .mil-hero-img img {
-  width: 100%;
-  height: 100%;
+  width: 120px;
+  height: 120px;
   position: absolute;
   top: 0;
   left: 0;
@@ -1844,7 +1847,7 @@ hero 1
 
   .mil-hero-1.mil-sm-hero .mil-hero-main {
     height: auto;
-    padding: 220px 0 120px;
+    padding: 50px 0 120px;
   }
 
   .mil-hero-1.mil-sm-hero .mil-hero-main .mil-hero-text {
@@ -1862,7 +1865,8 @@ hero 1
   }
 
   .mil-hero-1 .mil-hero-main .mil-hero-text {
-    padding-top: 100px;
+    padding-top: 10px;
+    margin: 0 30px;
   }
 
   .mil-hero-1 .mil-shapes .mil-s-2 {
@@ -1902,7 +1906,7 @@ hero 1
 
 @media (max-height: 800px) {
   .mil-hero-1 .mil-hero-main {
-    height: auto;
+    height: 100vh;
   }
 }
 
@@ -2845,6 +2849,7 @@ preloader
 
 ------------------------------------------- */
 .mil-preloader {
+  font-family: 'Georama-Bold';
   position: fixed;
   z-index: 99999999;
   top: 0;
@@ -2870,15 +2875,15 @@ preloader
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .mil-preloader .mil-preloader-animation .mil-pos-abs p {
-  font-family: "Anton", sans-serif;
+  font-family: 'Georama-Bold';
   text-transform: uppercase;
   opacity: 0;
   margin-right: 15px;
@@ -3309,7 +3314,7 @@ top panel
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: right;
-
+margin-right: -400px;
   width: 100%;
   -webkit-transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
   transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);

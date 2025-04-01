@@ -136,6 +136,7 @@ color: #fff;
 }
 /* Estilo para dispositivos móviles */
 @media (max-width: 768px) {
+    
 
     .about-content h1 {
         padding: 0px 20px;
@@ -177,6 +178,32 @@ color: #fff;
 .team-content h1{
     font-size: 1.7rem;
 }
+ /* Imagen de la frase para celular */
+.frase{
+    background-image: url('../img/suprads/410\ x\ 295_Celular\ v4.jpg'); /* Ruta a tu imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra todo el div */
+    background-position: center; /* Centra la imagen */
+    background-size: cover; /* Asegura que la imagen cubra todo el div */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.mil-head2 {
+    padding: 0 20px!important;
+    font-size: 24px; /* 📌 Hacemos el título más compacto */
+}
+/* Sección Sobre Nosotros */
+.about-section {
+    padding: 60px 0;
+    background-image: url('../img/suprads/410\ x\ 1500_Cel\ fondo\ negro\ v2.jpg'); /* Ruta a tu imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra todo el div */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+
+}
+
 }
 
 /* ==========================
@@ -212,4 +239,10 @@ color: #fff;
     transform: scale(1.1);
 }
 
+
+@media (max-width:400px){
+    .gallery-item {
+        width: 140px;
+        height: 140px;
+}}
 
