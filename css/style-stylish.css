@@ -483,6 +483,25 @@ h6,
   color: #D2D2D0;
   letter-spacing: -2%;
 }
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #25D366;
+  border-radius: 50%;
+  padding: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+.whatsapp-float img {
+  width: 40px;
+  height: 40px;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
 
 b {
   font-weight: 100;
@@ -562,6 +581,7 @@ a {
 }
 
 .mil-text-sm {
+  font-family: 'IBMPlex-Regular';
   font-size: 14px;
   line-height: 160%;
 }
@@ -673,7 +693,7 @@ a {
 
 .mil-head1 {
   font-size: 32px;
-  line-height: 120%;
+  line-height: 30%;
 }
 @media (max-width: 768px) {
   .mil-head1 {
@@ -2502,13 +2522,14 @@ preloader
           align-items: center;
 }
 .mil-preloader .mil-preloader-animation .mil-pos-abs p {
-  font-family: "Anton", sans-serif;
+  font-family: 'Georama-Bold';
   text-transform: uppercase;
   opacity: 0;
   margin-right: 15px;
   -webkit-filter: blur(10px);
-          filter: blur(10px);
+  filter: blur(10px);
 }
+
 .mil-preloader .mil-preloader-animation .mil-pos-abs p:last-child {
   margin-right: 0;
 }
@@ -3273,7 +3294,7 @@ menu window
 }
 .mil-main-menu li a {
   text-transform: uppercase;
-  font-family: "Anton", sans-serif;
+  font-family: 'IBMPlex-Medium';
   font-size: 22px;
   color: #D2D2D0;
   -webkit-transition: 0.2s cubic-bezier(0, 0, 0.3642, 1);

@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $project  = $_POST["project"] ?? '';
     $budget   = $_POST["budget"] ?? '';
 
-    // Plataformas seleccionadas (checkbox)
+    // Plataformas seleccionadas (checkbox - múltiples)
     $platforms = $_POST["platforms"] ?? [];
     $platformsList = !empty($platforms) ? implode(", ", $platforms) : "No seleccionadas";
 
@@ -18,25 +18,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    // Mensaje a enviar (puede ser por mail, guardar en base de datos, etc.)
+    // Mensaje a enviar
     $mensaje = "
-        📩 Nuevo formulario recibido de Paid Media:\n
-        🧑 Nombre: $name\n
-        🏢 Empresa: $company\n
-        📧 Email: $email\n
-        📞 Teléfono: $phone\n
-        💻 Plataformas: $platformsList\n
-        🧾 Proyecto: $project\n
-        💸 Presupuesto: $budget
-    ";
+📩 Nuevo formulario recibido de Paid Media:
 
-    // Por ejemplo, podrías enviarlo por email
-    $destinatario = "ignaciosoraka@gmail.com";
-    $asunto = "Formulario";
-    $cabeceras = "From: Suprads <noreply@tuweb.com>\r\n";
-
+🧑 Nombre: $name
+🏢 Empresa: $company
+📧 Email: $email
+📞 Teléfono: $phone
+📱 Plataformas seleccionadas: $platformsList
+🧾 Proyecto: $project
+💸 Presupuesto: $budget
+";
 
     // Enviar email
+    $destinatario = "ignaciosoraka@gmail.com";
+    $asunto = "Formulario - Paid Media";
+    $cabeceras = "From: Suprads <noreply@tuweb.com>\r\n";
+
     if (mail($destinatario, $asunto, $mensaje, $cabeceras)) {
         echo "✅ ¡Formulario enviado con éxito!";
     } else {

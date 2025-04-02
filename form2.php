@@ -8,33 +8,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $project  = $_POST["project"] ?? '';
     $budget   = $_POST["budget"] ?? '';
 
-    // Plataformas seleccionadas (checkbox)
-    $platforms = $_POST["platforms"] ?? [];
-    $platformsList = !empty($platforms) ? implode(", ", $platforms) : "No seleccionadas";
-
     // Validación simple
     if (empty($name) || empty($email) || empty($project)) {
         echo "Por favor, completá los campos obligatorios.";
         exit;
     }
 
-    // Mensaje a enviar (puede ser por mail, guardar en base de datos, etc.)
+    // Armar mensaje
     $mensaje = "
-        📩 Nuevo formulario recibido de Sitiios Web, Ecommerce y Automatizaciones:\n
-        🧑 Nombre: $name\n
-        🏢 Empresa: $company\n
-        📧 Email: $email\n
-        📞 Teléfono: $phone\n
-        💻 Plataformas: $platformsList\n
-        🧾 Proyecto: $project\n
-        💸 Presupuesto: $budget
-    ";
+📩 Nuevo formulario recibido de Sitios Web, Ecommerce y Automatizaciones:
 
-    // Por ejemplo, podrías enviarlo por email
+🧑 Nombre: $name
+🏢 Empresa: $company
+📧 Email: $email
+📞 Teléfono: $phone
+🧾 Proyecto: $project
+💸 Presupuesto: $budget
+";
+
+    // Configuración de email
     $destinatario = "ignaciosoraka@gmail.com";
-    $asunto = "Formulario";
+    $asunto = "Formulario - Sitios Web / Ecommerce / CRM";
     $cabeceras = "From: Suprads <noreply@tuweb.com>\r\n";
-
 
     // Enviar email
     if (mail($destinatario, $asunto, $mensaje, $cabeceras)) {

@@ -27,6 +27,20 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
+    <!-- Whatspp  -->
+    <a href="https://wa.me/5491123456789" class="whatsapp-float hidden-whatsapp" target="_blank"
+        title="Chateá con nosotros">
+        <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png" alt="WhatsApp">
+    </a>
+    <!-- Para que aparezca el whatsapp despues de que apse el preloader  -->
+    <script>
+        window.addEventListener("load", () => {
+            setTimeout(() => {
+                document.querySelector(".whatsapp-float").classList.remove("hidden-whatsapp");
+            }, 5000); // Espera 4 segundos (lo que tarda tu preloader)
+        });
+    </script>
+
     <!-- wrapper -->
     <div id="smooth-wrapper" class="mil-page-wrapper">
 
@@ -47,7 +61,7 @@
                 <div class="mil-pos-abs mil-animation-2">
                     <div class="mil-reveal-frame">
                         <p class="mil-reveal-box"></p>
-                        <p class="mil-head1 mil-m1">su.com</p>
+                        <p class="mil-head1 mil-m1">suprads.com</p>
                     </div>
                 </div>
             </div>
@@ -80,10 +94,10 @@
                         <ul>
                             <li><a href="../" class="mil-scroll-to" data-no-swup>Inicio</a></li>
                             <li><a href="../proyectos/" class="mil-scroll-to" data-no-swup>Proyectos</a></li>
-                            
+
                             <li><a href="../planificador/" class="mil-scroll-to" data-no-swup>Planificador</a></li>
                             <li><a href="#top" class="mil-scroll-to" data-no-swup>Nosotros</a></li>
-                            
+
                         </ul>
                     </div>
 
@@ -98,7 +112,7 @@
                 </div>
             </div>
 
-          
+
             <div class="mil-menu-frame mil-menu-frame-2">
                 <div class="mil-menu-window">
                     <div class="container">
@@ -108,7 +122,8 @@
                                     <ul class="mil-main-menu">
                                         <li><a href="#top" class="mil-scroll-to">Inicio</a></li>
                                         <li><a href="proyectos/" class="mil-scroll-to" data-no-swup>Proyectos</a></li>
-                                        <li><a href="planificador/" class="mil-scroll-to" data-no-swup>Planificador</a></li>
+                                        <li><a href="planificador/" class="mil-scroll-to" data-no-swup>Planificador</a>
+                                        </li>
                                         <li><a href="nosotros/" class="mil-scroll-to" data-no-swup>Nosotros</a></li>
                                     </ul>
                                 </div>
@@ -518,7 +533,7 @@
                                     alt="Planificador de Proyectos">
                             </div>
                             <h3 class="cta-title">PLANIFICADOR DE PROYECTOS</h3>
-                            <p>¿Está interesado en trabajar con nosotros? Abra nuestro planificador de propuestas para
+                            <p>¿Estas interesado en trabajar con nosotros? Abrí nuestro planificador de propuestas para
                                 comenzar.</p>
                             <div class="cta-inline">
                                 <span></span>
@@ -560,15 +575,15 @@
                                     <img src="../img/suprads/logo-2.png" alt="Logo de la empresa">
                                 </div>
 
-                               <!-- 📌 MENÚ DE NAVEGACIÓN -->
-                <ul class="custom-footer-menu">
-                    <li><a href="../">Inicio</a></li>
-                    <li><a href="../proyectos/">Proyectos</a></li>
-                    <li><a href="../planificador/">Planificador</a></li>
-                    <li><a href="../nosotros/">Nosotros</a></li>
-                </ul>
+                                <!-- 📌 MENÚ DE NAVEGACIÓN -->
+                                <ul class="custom-footer-menu">
+                                    <li><a href="../">Inicio</a></li>
+                                    <li><a href="../proyectos/">Proyectos</a></li>
+                                    <li><a href="../planificador/">Planificador</a></li>
+                                    <li><a href="../nosotros/">Nosotros</a></li>
+                                </ul>
 
-                                  <!-- 📌 REDES SOCIALES 
+                                <!-- 📌 REDES SOCIALES 
                                 <div class="custom-footer-social">
                                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                                     <a href="#"><i class="fab fa-instagram"></i></a>

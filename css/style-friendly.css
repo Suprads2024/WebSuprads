@@ -501,6 +501,7 @@ settings
   }
 }
 
+
 /* -------------------------------------------
 
 typography
@@ -526,6 +527,39 @@ h6,
   color: #353639;
   letter-spacing: -2%;
 }
+/* Botón flotante de WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Oculto hasta que se quite el preloader */
+.hidden-whatsapp {
+  display: none;
+}
+
+/* Efecto hover */
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.3);
+}
+
 
 b {
   font-weight: 100;
@@ -616,6 +650,7 @@ a {
 }
 
 .mil-text-sm {
+  font-family: 'IBMPlex-Regular';
   font-size: 14px;
   line-height: 160%;
 }
@@ -681,7 +716,9 @@ a {
 @media (max-width: 768px) {
   .mil-display2 {
     font-size: calc(1rem + 9vw);
+    
   }
+
 }
 
 .mil-display3 {
@@ -893,6 +930,7 @@ a {
 }
 
 .mil-rubber {
+
   white-space: pre-wrap;
 }
 
@@ -1547,7 +1585,7 @@ spaces
   }
 
   .mil-p-160-0 {
-    padding-top: 120px;
+    padding-top: 10px;
   }
 
   .mil-p-0-160 {
@@ -1612,7 +1650,7 @@ hero 1
   align-items: center;
   text-align: center;
   padding-bottom: 30px;
-  margin-left: 50px;
+  margin-left: 0px;
 }
 
 /* .mil-hero-1 .mil-hero-main .mil-hero-text .mil-text-pad {
@@ -1847,7 +1885,7 @@ hero 1
 
   .mil-hero-1.mil-sm-hero .mil-hero-main {
     height: auto;
-    padding: 50px 0 120px;
+    padding: 50px 0 60px;
   }
 
   .mil-hero-1.mil-sm-hero .mil-hero-main .mil-hero-text {
@@ -3763,7 +3801,7 @@ menu window
 
 .mil-main-menu li a {
   text-transform: uppercase;
-  font-family: "Anton", sans-serif;
+  font-family: 'IBMPlex-Medium';
   font-size: 22px;
   color: #353639;
   -webkit-transition: 0.2s cubic-bezier(0, 0, 0.3642, 1);

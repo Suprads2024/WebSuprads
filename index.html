@@ -31,7 +31,22 @@
 <body>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    
 
+      <!-- Whatspp  -->
+    <a href="https://wa.me/5491123456789" class="whatsapp-float hidden-whatsapp" target="_blank" title="Chateá con nosotros">
+        <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png" alt="WhatsApp">
+    </a>
+      <!-- Para que aparezca el whatsapp despues de que apse el preloader  -->
+    <script>
+        window.addEventListener("load", () => {
+            setTimeout(() => {
+                document.querySelector(".whatsapp-float").classList.remove("hidden-whatsapp");
+            }, 5000); // Espera 4 segundos (lo que tarda tu preloader)
+        });
+    </script>
+    
+    
     <!-- wrapper -->
     <div id="smooth-wrapper" class="mil-page-wrapper">
 
@@ -183,8 +198,8 @@
                                     </span>
                                 </a>
                             </div>
-                            <section>
-                                <div class="mil-hero-img mil-up">
+                            <section id="Servicios">
+                                <div class="mil-hero-img mil-up" >
                                     <h2 class="soluciones-titulo">¿Qué hacemos?</h2> <!-- Título agregado -->
                                     <div class="soluciones-container">
 
@@ -196,7 +211,7 @@
                                                     class="solucion-logo">
                                                 <h3>SOLUCIONES INTEGRALES </h3>
                                                 <p>Proyectos que requieren de disciplinas digitales en sinergia.</p>
-                                                <a href="planificador/index.html#PlanificadorC" class="solucion-btn">Contactar</a>
+                                                <a href="planificador/index1.html" class="solucion-btn">Contactar</a>
                                             </div>
                                             <!--Planner B -->
                                             <div class="solucion">
@@ -204,7 +219,7 @@
                                                     class="solucion-logo">
                                                 <h3>PAID MEDIA </h3>
                                                 <p>Google Ads, Meta Ads, Tiktok Ads.</p>
-                                                <a href="planificador/index.html#PlanificadorB" class="solucion-btn">Contactar</a>
+                                                <a href="planificador/index5.html" class="solucion-btn">Contactar</a>
                                             </div>
                                         </div>
 
@@ -216,7 +231,7 @@
                                                     class="solucion-logo">
                                                 <h3>ECOMMERCE</h3>
                                                 <p>Tiendas online robustas, seguras y escalables.</p>
-                                                <a href="planificador/index.html#PlanificadorA" class="solucion-btn">Contactar</a>
+                                                <a href="planificador/index2.html" class="solucion-btn">Contactar</a>
                                             </div>
                                             <!-- Planner E-->
                                             <div class="solucion">
@@ -224,7 +239,7 @@
                                                     class="solucion-logo">
                                                 <h3>DISEÑO GRÁFICO </h3>
                                                 <p>Diseño de Logos, Sistemas de Identidad y más.</p>
-                                                <a href="planificador/index.html#PlanificadorE" class="solucion-btn">Contactar</a>
+                                                <a href="planificador/index3.html" class="solucion-btn">Contactar</a>
                                             </div>
                                             <!-- Planer A -->
                                             <div class="solucion">
@@ -232,7 +247,7 @@
                                                     class="solucion-logo">
                                                 <h3>CRM Y AUTOMATIZACIONES</h3>
                                                 <p>Implementación de CRM, Email Marketing y Chatbots.</p>
-                                                <a href="planificador/index.html#PlanificadorA" class="solucion-btn">Contactar</a>
+                                                <a href="planificador/index6.html" class="solucion-btn">Contactar</a>
                                             </div>
                                         </div>
 
@@ -244,7 +259,7 @@
                                                     class="solucion-logo">
                                                 <h3>COMMUNITY MANAGEMENT</h3>
                                                 <p>Gestión de redes sociales y generación de contenido.</p>
-                                                <a href="planificador/index.html#PlanificadorD" class="solucion-btn">Contactar</a>
+                                                <a href="planificador/index4.html" class="solucion-btn">Contactar</a>
                                             </div>
                                             <!-- Planer A -->
                                             <div class="solucion">
@@ -252,7 +267,7 @@
                                                     class="solucion-logo">
                                                 <h3>SITIOS WEB</h3>
                                                 <p>Desde Landing Pages hasta Sitios Corporativos.</p>
-                                                <a href="planificador/index.html#PlanificadorA" class="solucion-btn">Contactar</a>
+                                                <a href="planificador/index7.html" class="solucion-btn">Contactar</a>
                                             </div>
                                         </div>
 
@@ -481,11 +496,11 @@
                                     alt="Planificador de Proyectos">
                             </div>
                             <h3 class="cta-title">PLANIFICADOR DE PROYECTOS</h3>
-                            <p>¿Está interesado en trabajar con nosotros? Abra nuestro planificador de propuestas para
+                            <p>¿Estas interesado en trabajar con nosotros? Abrí nuestro planificador de propuestas para
                                 comenzar.</p>
                             <div class="cta-inline">
                                 <span></span>
-                               <button class="cta-button"> <a href="./planificador/">Consultar</a></button>
+                                <a href="#Servicios"> <button class="cta-button">Consultar</button></a>
                             </div>
                         </div>
 
