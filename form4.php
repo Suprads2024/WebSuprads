@@ -1,4 +1,13 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+// Cargar las dependencias de PHPMailer
+require './PHPMailer-master/src/Exception.php';
+require './PHPMailer-master/src/PHPMailer.php';
+require './PHPMailer-master/src/SMTP.php';
+
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Datos básicos
     $name     = $_POST["name"] ?? '';
@@ -31,15 +40,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 💸 Presupuesto: $budget
 ";
 
-    // Enviar email
-    $destinatario = "ignaciosoraka@gmail.com";
-    $asunto = "Formulario - Community Management";
-    $cabeceras = "From: Suprads <noreply@tuweb.com>\r\n";
+$mail = new PHPMailer(true);
 
-    if (mail($destinatario, $asunto, $mensaje, $cabeceras)) {
-        echo "✅ ¡Formulario enviado con éxito!";
-    } else {
-        echo "❌ Hubo un error al enviar el formulario.";
-    }
+try {
+// Configuración SMTP
+$mail->isSMTP();
+$mail->Host       = 'mail.privateemail.com';
+$mail->SMTPAuth   = true;
+$mail->Username   = 'contacto@suprads.com';
+$mail->Password   = 'contactsuprads@'; // Asegurate que esta es la contraseña REAL del correo
+$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // ✅ Mejor usar constante
+$mail->Port       = 465;
+
+$mail->setFrom('contacto@suprads.com', 'Formulario Web');
+$mail->addAddress('ignaciosoraka@gmail.com');
+
+    // Contenido
+    $mail->isHTML(false);
+    $mail->Subject = 'Formulario desde el sitio';
+    $mail->Body    = $mensaje;
+
+    $mail->send();
+    header("Location: gracias/index.html");
+    exit;
+
+} catch (Exception $e) {
+    echo "Error al enviar: {$mail->ErrorInfo}";
+}
 }
 ?>

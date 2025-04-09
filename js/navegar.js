@@ -7,7 +7,7 @@ document.querySelectorAll(".mil-onepage-nav a").forEach(link => {
             event.preventDefault();
             document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
         } else if (href && href !== "#") {
-            window.location.href = href;
+            window.location.assign(href); // 👈 navegación real
         }
     });
 });
@@ -21,7 +21,7 @@ document.querySelectorAll(".mil-main-menu a").forEach(link => {
             event.preventDefault();
             document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
         } else if (href && href !== "#") {
-            window.location.href = href;
+            window.location.assign(href); // 👈 navegación real
         }
     });
 });
