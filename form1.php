@@ -55,8 +55,9 @@ $mail->Port       = 465;
 $mail->setFrom('contacto@suprads.com', 'Formulario Web');
 
 // Destinatarios
-$mail->addAddress('contact@suprads.com');
-$mail->addAddress('ignaciosoraka@gmail.com');
+
+$mail->addAddress('ignaciosoraka@gmail.com'); // Destinatario principal
+$mail->addBCC('contacto@suprads.com'); // 👈 Copia oculta al buzón del remitente
 
         // Contenido
         $mail->isHTML(false);

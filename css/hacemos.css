@@ -194,7 +194,9 @@
         gap: 25px; /* Gap uniforme para todas las tarjetas */
         align-items: center;
     }
-
+    .soluciones-titulo {
+        font-size: 26px;
+    }
     .fila {
         flex-direction: column;
         gap: 25px;
