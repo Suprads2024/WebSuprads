@@ -43,20 +43,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $mail = new PHPMailer(true);
 
 try {
-// Configuración SMTP
-$mail->isSMTP();
-$mail->Host       = 'mail.privateemail.com';
-$mail->SMTPAuth   = true;
-$mail->Username   = 'contacto@suprads.com';
-$mail->Password   = 'contactsuprads@'; // Asegurate que esta es la contraseña REAL del correo
-$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // ✅ Mejor usar constante
-$mail->Port       = 465;
-
-$mail->setFrom('contacto@suprads.com', 'Formulario Web');
-
-// Destinatarios
-$mail->addAddress('contact@suprads.com');
-$mail->addAddress('ignaciosoraka@gmail.com');
+    // Configuración SMTP
+    $mail->isSMTP();
+    $mail->Host       = 'smtp.gmail.com';
+    $mail->SMTPAuth   = true;
+    $mail->Username   = 'contact@suprads.com';
+    $mail->Password   = 'awpqggzgryifuqur'; // Asegurate que esta es la contraseña REAL del correo
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // ✅ para 587
+    $mail->Port       = 587;
+    
+    $mail->setFrom('contact@suprads.com', 'Web Suprads');
+    
+    // Destinatarios
+    
+    $mail->addAddress('ignaciosoraka@gmail.com');
+    $mail->addAddress('contact@suprads.com', 'Web Suprads');
+    $mail->addAddress('contacto@suprads.com');
 
     // Contenido
     $mail->isHTML(false);
