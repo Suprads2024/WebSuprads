@@ -48,6 +48,9 @@ $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // ✅ Mejor usar constante
 $mail->Port       = 465;
 
 $mail->setFrom('contacto@suprads.com', 'Formulario Web');
+
+// Destinatarios
+$mail->addAddress('contact@suprads.com');
 $mail->addAddress('ignaciosoraka@gmail.com');
 
     // Contenido
