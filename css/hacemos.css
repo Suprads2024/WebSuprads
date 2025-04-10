@@ -7,6 +7,15 @@
     padding: 60px 20px;
 
 }
+/* --- FONDO PRINCIPAL CON IMAGEN DE FONDO --- */
+.mil-hero-img.mil-up2 {
+ margin-top: -30px;
+    background-size: cover; /* La imagen cubre todo el div */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    padding: 60px 20px;
+
+}
 
 /* --- TÍTULO PRINCIPAL --- */
 .soluciones-titulo {

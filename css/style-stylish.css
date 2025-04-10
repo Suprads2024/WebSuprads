@@ -2987,6 +2987,11 @@ top panel
   color: #D2D2D0;
 }
 
+.mil-onepage-nav ul li a:hover {
+  font-family: 'IBMPlex-Bold';
+  color: #7f7cfd;
+}
+
 .mil-menu-btn {
   padding: 20px 10px 20px;
   height: 22px;

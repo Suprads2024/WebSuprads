@@ -10,7 +10,7 @@
 
 /* Cada Elemento */
 .cta-item {
-    max-width: 280px;
+    max-width: 350px;
     padding: 20px;
     display: flex;
     flex-direction: column;
