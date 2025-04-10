@@ -57,8 +57,7 @@ try {
     
     $mail->addAddress('ignaciosoraka@gmail.com');
     $mail->addAddress('contact@suprads.com', 'Web Suprads');
-    $mail->addAddress('contacto@suprads.com');
-
+   
     // Contenido
     $mail->isHTML(false);
     $mail->Subject = 'Formulario desde el sitio';

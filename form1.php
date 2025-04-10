@@ -57,8 +57,8 @@ $mail->setFrom('contact@suprads.com', 'Web Suprads');
 // Destinatarios
 
 $mail->addAddress('ignaciosoraka@gmail.com');
-$mail->addAddress('contact@suprads.com');
-$mail->addAddress('contacto@suprads.com');
+$mail->addAddress('contact@suprads.com', 'Web Suprads');
+
 
 
         // Contenido
