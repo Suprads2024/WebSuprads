@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", function () {
+// Encapsulamos la lógica en una función
+function animateStatistics() {
     const stats = document.querySelectorAll(".stat");
 
     function isElementInViewport(el) {
@@ -34,5 +35,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     window.addEventListener("scroll", animateCircles);
-    animateCircles(); // Para ejecutar al inicio
-});
+    animateCircles(); // Ejecutar al inicio
+}
+
+// Ejecutar al cargar la página inicialmente
+document.addEventListener("DOMContentLoaded", animateStatistics);
+
+// Ejecutar después de cada navegación con Swup
+document.addEventListener("swup:contentReplaced", animateStatistics);

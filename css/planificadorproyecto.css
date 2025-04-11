@@ -72,6 +72,7 @@
 }
 
 .mil-textarea-group label {
+    font-family: 'IBMPlex-Bold';
     font-size: 14px;
     font-weight: bold;
     color: #555;
@@ -107,7 +108,7 @@
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 40px;
 }
 
@@ -218,6 +219,13 @@
     .mil-submit-btn2{
         padding: 12px 75px;
     }
+
+    form input {
+        height: 50px;
+    }
+    form textarea{
+        height: 100px;
+    }
 }
 
 
@@ -289,6 +297,10 @@
         flex-direction: column;
         align-items: center;
     }
+
+    .mil-form-title{
+        font-size: 18px;
+    }
 }
 
 /* 📌 ESTILOS DE NUEVO FOOTER */
@@ -338,16 +350,40 @@
   .custom-footer-menu li {
     display: inline-block;
   }
-  
   .custom-footer-menu a {
     color: #303030;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
   }
-  
   .custom-footer-menu a:hover {
-    color: #292929;
+    color: #7f7cfd;
+  }
+
+
+  /* 📌 Menú de Navegación2 */
+  .custom-footer-menu2 {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+  }
+  
+  .custom-footer-menu2 li {
+    display: inline-block;
+  }
+  
+ 
+  .custom-footer-menu2 a {
+    color: #d2d2d2;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  
+  .custom-footer-menu2 a:hover {
+    color: #7f7cfd;
   }
   
   /* 📌 Redes Sociales */
@@ -382,6 +418,7 @@
   .custom-footer-bottom a:hover {
     text-decoration: underline;
   }
+  
   .subtitulo{
     margin-top: 20px;
     font-size: 22px;
@@ -402,7 +439,11 @@
         gap: 15px;
         margin-top: 20px;
     }
-  
+   .custom-footer-menu2 {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+    }
     .custom-footer-social {
         margin-top: 20px;
     }
