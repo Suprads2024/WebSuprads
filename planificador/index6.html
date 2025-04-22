@@ -212,12 +212,14 @@ content="Potenciamos tu negocio en línea con estrategias efectivas de marketing
 
 
 
-                               
-                                <div id="PlanificadorA" class="mil-form-section"> <!-- 📝 Planer A -->
+
+
+                                <!-- 📌 FORMULARIOS (Se desplazarán al hacer clic en los botones) -->
+                                <div id="PlanificadorC" class="mil-form-section"> <!-- 📝 Planer a-->
                                     <div class="row mil-jcc">
                                         <div class="col-lg-10">
-                                            <form action="../form2.php" method="post" class="mil-form">
-
+                                            <form action="../form1.php" method="post" class="mil-form"
+                                                accept-charset="UTF-8">
                                                 <!-- 📌 TÍTULO -->
                                                 <h3 class="mil-form-title">Tu Información</h3>
 
@@ -246,6 +248,30 @@ content="Potenciamos tu negocio en línea con estrategias efectivas de marketing
                                                 </div>
 
                                                 <!-- 📌 TÍTULO -->
+                                                <h3 class="mil-form-title">Tipo de Proyecto</h3>
+
+                                                <!-- 📌 BOTONES SELECCIONABLES -->
+                                                <div class="mil-budget-options">
+                                                    <label class="mil-budget-btn">
+                                                        <input type="radio" name="platforms[]" value="landing-page"
+                                                            required>
+                                                        <span>Landing Page</span>
+                                                    </label>
+                                                    <label class="mil-budget-btn">
+                                                        <input type="radio" name="platforms[]" value="sitio-web">
+                                                        <span>Sitio Web</span>
+                                                    </label>
+                                                    <label class="mil-budget-btn">
+                                                        <input type="radio" name="platforms[]" value="ecommerce">
+                                                        <span>Ecommerce</span>
+                                                    </label>
+                                                    <label class="mil-budget-btn">
+                                                        <input type="radio" name="platforms[]" value="crm">
+                                                        <span>CRM y Automatizaciones</span>
+                                                    </label>
+                                                </div>
+
+                                                <!-- 📌 TÍTULO -->
                                                 <h3 class="mil-form-title">Contanos sobre tu Proyecto y Objetivos</h3>
 
                                                 <!-- 📌 ÁREA DE TEXTO -->
@@ -255,38 +281,35 @@ content="Potenciamos tu negocio en línea con estrategias efectivas de marketing
                                                 </div>
 
                                                 <!-- 📌 TÍTULO -->
-                                                <h3 class="mil-form-title">Presupuesto Estimado</h3>
+                                                <h3 class="mil-form-title">Presupuesto Estimado </h3>
                                                 <label for="project" style="  font-family: 'IBMPlex-Bold'; margin-left:2px; color: #555;">Seleccioná el rango de presupuesto estimado para el proyecto:</label>
 
                                                 <!-- 📌 OPCIONES DE PRESUPUESTO -->
                                                 <div class="mil-budget-options">
                                                     <label class="mil-budget-btn">
-                                                        <input type="radio" name="budget" value="500-1000" required>
-                                                        <span>USD 500 - 1000</span>
+                                                        <input type="radio" name="budget" value="300-600" required>
+                                                        <span>USD 300 - 600</span>
                                                     </label>
                                                     <label class="mil-budget-btn">
-                                                        <input type="radio" name="budget" value="1000-2000">
-                                                        <span>USD 1000 - 2000</span>
+                                                        <input type="radio" name="budget" value="600-1000">
+                                                        <span>USD 600 - 1000</span>
                                                     </label>
                                                     <label class="mil-budget-btn">
-                                                        <input type="radio" name="budget" value="2000+">
-                                                        <span>Más de USD 2000</span>
+                                                        <input type="radio" name="budget" value="1000+">
+                                                        <span>Más de USD 1000</span>
                                                     </label>
                                                 </div>
-
 
                                                 <!-- 📌 BOTÓN DE ENVÍO -->
                                                 <div class="mil-submit-container">
-                                                    <button type="submit" class="mil-submit-btn">Sí, envía
-                                                        esto.</button>
-
+                                                    <button type="submit" class="mil-submit-btn" name="submit_form1">Envíar</button>
                                                 </div>
-
                                             </form>
+
                                         </div>
                                     </div>
                                 </div>
-                              
+
                             </div>
 
 
