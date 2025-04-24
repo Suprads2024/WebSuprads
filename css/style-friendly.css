@@ -5433,9 +5433,26 @@ partners
 
 /* -------------------------------------------
 
-prices
+captcha
 
 ------------------------------------------- */
+
+ /* Estilos personalizados para centrar el reCAPTCHA */
+ .g-recaptcha {
+  display: inline-block;
+  /* Asegura que el recaptcha se trate como un elemento en línea */
+}
+
+.captcha-container {
+  text-align: center;
+  /* Centra el contenido del contenedor */
+  margin: 20px 0;
+  /* Añade margen superior e inferior para separación */
+}
+
+@media (max-width: 389px){
+  .captcha-container{margin-left: -10px;} 
+}
 /* -------------------------------------------
 
 footer

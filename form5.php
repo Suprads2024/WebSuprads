@@ -2,6 +2,9 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
+
+
+
 // Cargar las dependencias de PHPMailer
 require './PHPMailer-master/src/Exception.php';
 require './PHPMailer-master/src/PHPMailer.php';
@@ -9,6 +12,24 @@ require './PHPMailer-master/src/SMTP.php';
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    
+    // Captura la respuesta del captcha y la IP del usuario
+    $ip = $_SERVER['REMOTE_ADDR'];
+    $captcha = $_POST['g-recaptcha-response'];
+
+    // Clave secreta de reCAPTCHA
+    $secretkey = "6LctIiMrAAAAAHnypeyO3e05MJMmYn9z88vw7xoq";
+
+    // Validación de Captcha
+    $respuesta = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretkey&response=$captcha&remoteip=$ip");
+    $atributos = json_decode($respuesta, true);
+
+    // Comprueba si la respuesta del captcha es válida
+    if (!$atributos['success']) {
+    echo "Verificación de CAPTCHA fallida. Por favor, intenta de nuevo.";
+    exit;}
+
     // Datos básicos
     $name     = $_POST["name"] ?? '';
     $company  = $_POST["company"] ?? '';
